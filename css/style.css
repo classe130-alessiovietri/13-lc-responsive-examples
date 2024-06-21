@@ -14,7 +14,190 @@ html {
 /* 
     GENERAL
 */
-.container {
-    max-width: 1000px;
+section {
+    min-height: 100vh;
+    border: 5px dashed red;
+    padding: 20px;
+}
+
+.quadrato {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+
+/* 
+    SECTION 1
+*/
+#s-1 div.quadrato {
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+@media screen and (min-width: 479px) {
+    #s-1 div.quadrato {
+        background-color: red;
+        display: inline-block;
+    }
+}
+
+/* 
+    SECTION 2
+*/
+#s-2 .container {
+    max-width: 800px;
     margin: 0 auto;
+    text-align: center;
+}
+
+#s-2 img {
+    width: 200px;
+    border: 1px solid red;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 780px) {
+
+    #s-2 .container {
+        max-width: 500px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+    #s-2 .container {
+        max-width: 300px;
+    }
+}
+
+/* 
+    SECTION 3
+*/
+#s-3 .quadrato {
+    transition: all 1s ease-in-out;
+}
+
+@media screen and (max-width: 480px) {
+
+    #s-3 .quadrato {
+        border-radius: 50%;
+    }
+
+}
+
+/* 
+    SECTION 4
+*/
+#s-4 .container {
+    height: 200px;
+    background-color: blue;
+}
+
+@media screen and (max-width: 480px) {
+
+    #s-4 .container {
+        background-color: lightgreen;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+
+    #s-4 .container {
+        background-color: purple;
+    }
+
+}
+
+/* 
+    SECTION 5
+*/
+@media screen and (min-width: 780px) {
+
+    #s-5 ul {
+        /* display: flex;
+        justify-content: space-between;
+        align-items: flex-start; */
+        list-style-type: none;
+    }
+
+    #s-5 ul li {
+        background-color: gray;
+        padding: 0 10px;
+        color: white;
+        width: calc(25% - 4px);
+        text-align: center;
+        display: inline-block;
+    }
+    
+}
+
+/* 
+    SECTION 6
+*/
+/* #s-6 {
+    display: flex;
+    min-height: 200px;
+}
+
+#s-6 > * {
+    padding: 20px;
+}
+
+#s-6 > :first-child {
+    background-color: blue;
+    width: 30%;
+}
+
+#s-6 > :last-child {
+    background-color: lightgreen;
+    width: 70%;
+}
+
+#s-6 > :last-child > * {
+    background-color: white;
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+}
+
+@media screen and (max-width: 580px) {
+
+    #s-6 > :first-child {
+        width: 100%;
+    }
+
+    #s-6 > :last-child {
+        display: none;
+    }
+
+} */
+
+#s-6 > :first-child {
+    min-height: 200px;
+    background-color: blue;
+}
+
+#s-6 > :first-child > :first-child {
+    min-height: 200px;
+    background-color: lightgreen;
+    width: 70%;
+    padding: 20px;
+    margin-left: auto;
+}
+
+#s-6 > :first-child > :first-child > * {
+    background-color: white;
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+}
+
+@media screen and (max-width: 580px) {
+
+    #s-6 > :first-child > :first-child {
+        display: none;
+    }
+
 }
